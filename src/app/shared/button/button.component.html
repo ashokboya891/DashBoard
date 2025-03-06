@@ -1,11 +1,14 @@
-<!-- <span> Logout </span>
-<span class="icon"> → </span> -->
-
 
     <span>
-        Logout
+        <ng-content ></ng-content>
     </span>
 
-    <span>
-        <span class="icon"> → </span>
-    </span>
+    
+        <span class="icon"> 
+            <ng-content ></ng-content>
+        </span>
+
+        <span>
+            <ng-content ></ng-content>
+        </span>
+        <ng-content select=".icon"></ng-content>
