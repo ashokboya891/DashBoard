@@ -1,19 +1,22 @@
-    <article>
-      <!-- <header>
-        <img src="status.png" alt="A signal symbol" />
-        <h2>Server Status</h2>
-      </header> -->
-      <div id="status">
-        @if (currentStatus === 'online') {
-          <p>Servers are online</p>
-          <p>All systems are operational.</p>
-        } @else if (currentStatus === 'offline') {
-          <p>Servers are offline</p>
-          <p>Functionality should be restored soon.</p>
-        } @else {
-          <p>Server status is unknown</p>
-          <p>Fetching server status failed.</p>
-        }
-      </div>
-    </article>
+   <div [class.status]="currentStatus==='online'">   <!--if it is offline we can not see class attribute for this in dev tools but online we can-->
+
+     <article>
+        <!-- <header>
+          <img src="status.png" alt="A signal symbol" />
+          <h2>Server Status</h2>
+        </header> -->
+        <div id="status">
+          @if (currentStatus === 'online') {
+            <p>Servers are online</p>
+            <p>All systems are operational.</p>
+          } @else if (currentStatus === 'offline') {
+            <p>Servers are offline</p>
+            <p>Functionality should be restored soon.</p>
+          } @else {
+            <p>Server status is unknown</p>
+            <p>Fetching server status failed.</p>
+          }
+        </div>
+      </article>
+   </div>
   
